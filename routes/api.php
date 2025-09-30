@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AssetController;
+use App\Http\Controllers\TransferController;
 
 
 Route::get('/test', function() {
@@ -16,3 +17,6 @@ Route::put('/assets/{asset}', [AssetController::class, 'update']);
 Route::delete('assets/{asset}', [AssetController::class, 'destroy']);
 // Additional routes for asset images
 Route::post('assets/{asset}/images', [AssetController::class, 'uploadImages']);
+// Transfer routes
+Route::get('assets/{asset}/transfers', [TransferController::class, 'history']);
+Route::post('assets/{asset}/transfer', [TransferController::class, 'transfer']);
