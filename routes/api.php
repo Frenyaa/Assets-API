@@ -17,6 +17,6 @@ Route::put('/assets/{asset}', [AssetController::class, 'update']);
 Route::delete('assets/{asset}', [AssetController::class, 'destroy']);
 // Additional routes for asset images
 Route::post('assets/{asset}/images', [AssetController::class, 'uploadImages']);
-// Transfer routes
+// Transfer routes..
 Route::get('assets/{asset}/transfers', [TransferController::class, 'history']);
-Route::post('assets/{asset}/transfer', [TransferController::class, 'transfer']);
+Route::post('assets/{asset}/transfers', [TransferController::class, 'transfer']);
